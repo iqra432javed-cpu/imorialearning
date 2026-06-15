@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subjects — Imoria Learning</title>
+  <meta name="description" content="Choose a subject to start studying. Chemistry available now." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Subjects-page-only styles ── */
+    .subjects-page-hero {
+      padding: calc(var(--nav-h) + 48px) 0 48px;
+      background: linear-gradient(135deg, var(--navy), #0a1a2e);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .subjects-page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(201,168,76,0.07), transparent);
+    }
+    .subjects-page-hero .container { position: relative; z-index: 2; }
+    .subjects-page-hero h1 { color: var(--white); margin-bottom: 12px; }
+    .subjects-page-hero p  { color: var(--gray-400); font-size: 1.05rem; }
+
+    /* Filter row */
+    .filter-row {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 14px 0;
+      position: sticky; top: var(--nav-h); z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .filter-inner { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 7px 18px; border-radius: 50px;
+      border: 1.5px solid var(--gray-200);
+      background: var(--white); color: var(--gray-800);
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition);
+    }
+    .filter-btn:hover   { border-color: var(--gold); color: var(--gold); }
+    .filter-btn.active  { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* Subject grid */
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 48px 0 80px;
+    }
+
+    /* Active subject card (big) */
+    .subject-full-card {
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--gold);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow-gold);
+      transition: var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .subject-full-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201,168,76,0.2); }
+    .subject-full-banner {
+      height: 180px; display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; position: relative;
+    }
+    .subject-full-banner .active-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--green); color: var(--white);
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 4px 12px; border-radius: 50px;
+    }
+    .subject-full-body { padding: 24px; flex: 1; }
+    .subject-full-body h2 { color: var(--navy); font-size: 1.4rem; margin-bottom: 8px; }
+    .subject-full-body p  { color: var(--gray-600); font-size: 0.9rem; line-height: 1.65; margin-bottom: 20px; }
+    .subject-stats { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+    .subject-stat-pill {
+      background: var(--off-white); border: 1px solid var(--gray-200);
+      border-radius: 50px; padding: 6px 14px;
+      font-size: 0.8rem; font-weight: 600; color: var(--navy);
+    }
+    .subject-chapters { margin-bottom: 24px; }
+    .subject-chapters h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray-600); margin-bottom: 12px; }
+    .chapter-list-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid var(--gray-100);
+      font-size: 0.88rem; color: var(--gray-800);
+    }
+    .chapter-list-item:last-child { border-bottom: none; }
+    .chapter-list-item .ch-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      font-size: 0.72rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .chapter-list-item .ch-title { flex: 1; }
+    .chapter-list-item .ch-arrow { color: var(--gold); font-size: 0.9rem; }
+    .subject-full-footer {
+      padding: 20px 24px;
+      background: linear-gradient(135deg, var(--gold-pale), #fff5d0);
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+
+    /* Coming Soon card */
+    .soon-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      background: var(--white);
+      opacity: 0.7;
+      transition: var(--transition);
+    }
+    .soon-banner {
+      height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
+    }
+    .soon-body { padding: 20px 24px; }
+    .soon-body h3 { color: var(--navy); margin-bottom: 6px; }
+    .soon-body p  { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 16px; }
+    .soon-footer {
+      padding: 14px 24px; background: var(--off-white); border-top: 1px solid var(--gray-100);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .soon-chip {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;
+      padding: 4px 12px; border-radius: 50px;
+      background: var(--gray-200); color: var(--gray-600);
+    }
+    .soon-topics { display: flex; flex-wrap: wrap; gap: 6px; }
+    .soon-topic-tag {
+      font-size: 0.72rem; padding: 3px 10px; border-radius: 50px;
+      background: var(--gray-100); color: var(--gray-600);
+    }
+
+    /* What's inside info box */
+    .inside-box {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: var(--radius-lg); padding: 32px 36px;
+      color: var(--white); margin-bottom: 48px;
+      display: flex; gap: 48px; flex-wrap: wrap; align-items: center;
+    }
+    .inside-box h3 { color: var(--gold); margin-bottom: 6px; }
+    .inside-box p  { color: var(--gray-400); font-size: 0.9rem; max-width: 420px; }
+    .inside-tabs { display: flex; gap: 12px; flex-wrap: wrap; }
+    .inside-tab {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: var(--radius-md); padding: 12px 20px;
+      text-align: center; min-width: 110px;
+    }
+    .inside-tab .it-icon { font-size: 1.6rem; margin-bottom: 6px; }
+    .inside-tab .it-label { font-size: 0.78rem; color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 768px) {
+      .inside-box { flex-direction: column; gap: 24px; padding: 24px; }
+      .subjects-grid { grid-template-columns: 1fr; padding: 32px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════ NAVBAR ════════════════ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#a07000);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:var(--navy);">I</div>
+        <span class="nav-title">Imoria <span>Learning</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="subjects.html" class="nav-link active">Subjects</a></li>
+        <li><a href="chemistry.html" class="nav-link">Chemistry</a></li>
+      </ul>
+      <a href="chemistry.html" class="nav-cta">Start Learning →</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════ PAGE HERO ════════════════ -->
+<div class="subjects-page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span style="color:var(--gold);">Subjects</span>
+    </div>
+    <h1>Choose a Subject</h1>
+    <p>FSC Part 1 &amp; 2 · MDCAT Syllabus · Board Exam Ready</p>
+  </div>
+</div>
+
+<!-- ════════════════ FILTER ROW ════════════════ -->
+<div class="filter-row">
+  <div class="container">
+    <div class="filter-inner">
+      <button class="filter-btn active" onclick="filterSubjects('all', this)">All Subjects</button>
+      <button class="filter-btn" onclick="filterSubjects('available', this)">✅ Available</button>
+      <button class="filter-btn" onclick="filterSubjects('soon', this)">🔜 Coming Soon</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ MAIN CONTENT ════════════════ -->
+<div style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- What's inside box -->
+    <div style="padding-top:40px;">
+      <div class="inside-box">
+        <div>
+          <h3>What's Inside Each Chapter</h3>
+          <p>Every chapter is broken into four sections so you can study in the order that works for you.</p>
+        </div>
+        <div class="inside-tabs">
+          <div class="inside-tab">
+            <div class="it-icon">📚</div>
+            <div class="it-label">Concept Notes</div>
+          </div>
+          <div class="inside-tab">
+            <div class="it-icon">🧠</div>
+            <div class="it-label">MCQs</div>
+          </div>
+          <div class="inside-tab">
+            <div class="it-icon">✍️</div>
+            <div class="it-label">Short Qs</div>
+          </div>
+          <div class="inside-tab">
+            <div class="it-icon">📝</div>
+            <div class="it-label">Long Qs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subjects Grid -->
+    <div class="subjects-grid" id="subjects-grid">
+
+      <!-- ✅ CHEMISTRY (active) -->
+      <a href="chemistry.html" class="subject-full-card" data-status="available">
+        <div class="subject-full-banner chem-header">
+          ⚗️
+          <div class="active-badge">● Live</div>
+        </div>
+        <div class="subject-full-body">
+          <h2>Chemistry</h2>
+          <p>
+            Full FSC Part 1 &amp; 2 Chemistry coverage — periodic table, bonding,
+            states of matter, solutions, electrochemistry, organic chemistry and more.
+          </p>
+          <div class="subject-stats">
+            <span class="subject-stat-pill">📖 1 Chapter</span>
+            <span class="subject-stat-pill">🧠 25 MCQs</span>
+            <span class="subject-stat-pill">✍️ 20 Short Qs</span>
+            <span class="subject-stat-pill">📝 7 Long Qs</span>
+          </div>
+          <div class="subject-chapters">
+            <h4>Chapters Available</h4>
+            <div class="chapter-list-item">
+              <div class="ch-num">1</div>
+              <span class="ch-title">Periodic Table &amp; Periodic Properties</span>
+              <span class="ch-arrow">→</span>
+            </div>
+            <div class="chapter-list-item" style="opacity:0.4;">
+              <div class="ch-num" style="background:var(--gray-400);">2</div>
+              <span class="ch-title" style="color:var(--gray-400);">S, P, D &amp; F Block Elements</span>
+              <span class="soon-chip" style="font-size:0.65rem;">Soon</span>
+            </div>
+            <div class="chapter-list-item" style="opacity:0.4;">
+              <div class="ch-num" style="background:var(--gray-400);">3</div>
+              <span class="ch-title" style="color:var(--gray-400);">Chemical Bonding</span>
+              <span class="soon-chip" style="font-size:0.65rem;">Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="subject-full-footer">
+          <div class="btn btn-primary" style="width:100%;justify-content:center;">
+            Open Chemistry →
+          </div>
+        </div>
+      </a>
+
+      <!-- 🔜 PHYSICS -->
+      <div class="soon-card" data-status="soon">
+        <div class="soon-banner phys-header">⚡</div>
+        <div class="soon-body">
+          <h3>Physics</h3>
+          <p>Mechanics, waves, thermodynamics, optics, electricity and modern physics — designed for MDCAT and Punjab Board.</p>
+          <div class="soon-topics">
+            <span class="soon-topic-tag">Kinematics</span>
+            <span class="soon-topic-tag">Forces</span>
+            <span class="soon-topic-tag">Waves</span>
+            <span class="soon-topic-tag">Electricity</span>
+            <span class="soon-topic-tag">Modern Physics</span>
+          </div>
+        </div>
+        <div class="soon-footer">
+          <span class="soon-chip">Coming Soon</span>
+          <span style="font-size:0.8rem;color:var(--gray-400);">Chapters being built</span>
+        </div>
+      </div>
+
+      <!-- 🔜 BIOLOGY -->
+      <div class="soon-card" data-status="soon">
+        <div class="soon-banner bio-header">🔬</div>
+        <div class="soon-body">
+          <h3>Biology</h3>
+          <p>Cell structure, genetics, evolution, ecology, human physiology — comprehensive MDCAT biology coverage.</p>
+          <div class="soon-topics">
+            <span class="soon-topic-tag">Cell Biology</span>
+            <span class="soon-topic-tag">Genetics</span>
+            <span class="soon-topic-tag">Ecology</span>
+            <span class="soon-topic-tag">Physiology</span>
+            <span class="soon-topic-tag">Evolution</span>
+          </div>
+        </div>
+        <div class="soon-footer">
+          <span class="soon-chip">Coming Soon</span>
+          <span style="font-size:0.8rem;color:var(--gray-400);">Chapters being built</span>
+        </div>
+      </div>
+
+      <!-- 🔜 COMPUTER SCIENCE -->
+      <div class="soon-card" data-status="soon">
+        <div class="soon-banner cs-header">💻</div>
+        <div class="soon-body">
+          <h3>Computer Science</h3>
+          <p>Programming fundamentals, algorithms, data structures, databases and networking — full FSC CS coverage.</p>
+          <div class="soon-topics">
+            <span class="soon-topic-tag">Programming</span>
+            <span class="soon-topic-tag">Algorithms</span>
+            <span class="soon-topic-tag">Databases</span>
+            <span class="soon-topic-tag">Networking</span>
+          </div>
+        </div>
+        <div class="soon-footer">
+          <span class="soon-chip">Coming Soon</span>
+          <span style="font-size:0.8rem;color:var(--gray-400);">Chapters being built</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:32px;height:32px;border-radius:6px;background:linear-gradient(135deg,var(--gold),#a07000);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--navy);">I</div>
+          <span style="color:var(--white);font-weight:800;font-size:1.05rem;">Imoria Learning</span>
+        </div>
+        <p class="footer-tagline">Structured exam prep for FSC and MDCAT students across Pakistan.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Subjects</h5>
+        <a href="chemistry.html">Chemistry</a>
+        <a href="#">Physics (Soon)</a>
+        <a href="#">Biology (Soon)</a>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="subjects.html">All Subjects</a>
+        <a href="chemistry.html">Chemistry</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Imoria Learning</span>
+      <span>Built for <span>Pakistan's</span> students</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="main-toast"></div>
+
+<script src="main.js"></script>
+<script>
+  function filterSubjects(status, btn) {
+    // update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('#subjects-grid [data-status]');
+    cards.forEach(card => {
+      if (status === 'all') {
+        card.style.display = '';
+      } else {
+        card.style.display = card.dataset.status === status ? '' : 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
