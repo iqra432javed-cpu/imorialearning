@@ -1,0 +1,756 @@
+{
+  "subject": "Chemistry",
+  "grade": "FSC / MDCAT",
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": 1,
+      "title": "Periodic Table and Periodic Properties",
+      "subtitle": "Foundation of all Chemistry",
+      "overview": "This chapter traces the historical development of the periodic table and explains the modern arrangement of 118 elements. It covers classification of elements, the s/p/d/f block system, element families, periodic trends in atomic/ionic radius, ionization energy, electron affinity, and electronegativity, plus reactions of sodium and magnesium and the acid-base nature of Period 3 oxides and chlorides.",
+      "highYieldTopics": [
+        { "stars": 5, "topic": "Periodic trends: atomic radius, ionic radius, IE, EA, electronegativity" },
+        { "stars": 5, "topic": "s, p, d, f blocks and electron configuration from position" },
+        { "stars": 4, "topic": "Element families (alkali metals, halogens, noble gases, etc.)" },
+        { "stars": 4, "topic": "Oxides and chlorides of Period 3 — acidic/basic/amphoteric" },
+        { "stars": 3, "topic": "Anomalies in IE (B<Be, O<N) and EA (F vs Cl)" },
+        { "stars": 3, "topic": "Reactions of Na and Mg with water, O₂, Cl₂" },
+        { "stars": 2, "topic": "Historical development (Döbereiner, Newlands, Mendeleev, Moseley)" },
+        { "stars": 2, "topic": "Oxidation number variation across Period 3" }
+      ],
+      "topics": [
+        {
+          "id": "1.1",
+          "title": "Historical Development of the Periodic Table",
+          "memoryTrick": "LD NaMe Mo — Lavoisier → Döbereiner → Newlands → Lothar Meyer → Mendeleev → Moseley",
+          "keyPoints": [
+            "Antoine Lavoisier (18th century): First classification into metals and non-metals",
+            "Döbereiner's Triads (1829): Grouped elements in sets of 3 — atomic mass of middle element ≈ average of other two. Example: Li(7), Na(23), K(39) → (7+39)/2 = 23 ✓",
+            "Newlands' Law of Octaves (1864): 62 known elements arranged by atomic mass — every 8th element resembled the 1st (like musical octaves)",
+            "Lothar Meyer (1864): Plotted atomic volume vs atomic weight — curves showed periodicity",
+            "Mendeleev (1869): Arranged 63 elements by atomic mass, left gaps for undiscovered elements, predicted properties of missing elements (e.g., Eka-boron = Scandium). Father of the Periodic Table.",
+            "Moseley (1913): Used X-ray emission to determine exact atomic numbers — rearranged elements by atomic number"
+          ],
+          "modernLaw": "The physical and chemical properties of elements are periodic functions of their atomic numbers.",
+          "revisionTable": [
+            { "scientist": "Lavoisier", "year": "18th c.", "contribution": "Metals vs non-metals classification" },
+            { "scientist": "Döbereiner", "year": "1829", "contribution": "Triads (groups of 3)" },
+            { "scientist": "Newlands", "year": "1864", "contribution": "Law of Octaves (every 8th element)" },
+            { "scientist": "Lothar Meyer", "year": "1864", "contribution": "Atomic volume vs atomic weight curves" },
+            { "scientist": "Mendeleev", "year": "1869", "contribution": "63 elements by atomic mass; left gaps; predicted missing elements" },
+            { "scientist": "Moseley", "year": "1913", "contribution": "X-ray emission → atomic number basis → Modern Periodic Law" }
+          ],
+          "examTips": [
+            "Mendeleev used ATOMIC MASS — Moseley corrected it using ATOMIC NUMBER",
+            "The number '62' (Newlands) and 'every 8th' are exact details examiners check",
+            "Mendeleev's genius = leaving gaps + predicting properties of undiscovered elements"
+          ]
+        },
+        {
+          "id": "1.2",
+          "title": "Modern Periodic Table: Main Features",
+          "memoryTrick": "PEriods are Parallel (horizontal), Groups stand Tall (vertical)",
+          "keyPoints": [
+            "118 elements arranged in ascending order of atomic number",
+            "7 horizontal rows = Periods",
+            "18 vertical columns = Groups",
+            "Old system: 8 A-groups + 10 B-groups = 18 total",
+            "Same group → same valence electrons → similar chemical properties",
+            "Same group → gradual change in physical properties (top to bottom)",
+            "Same period → gradual change in properties (left to right)"
+          ],
+          "examTips": [
+            "7 periods and 18 groups — memorize these numbers exactly",
+            "Elements in same group have similar CHEMICAL properties (not identical)",
+            "Physical properties still change gradually down the group"
+          ]
+        },
+        {
+          "id": "1.3",
+          "title": "Metals, Non-Metals, and Metalloids",
+          "memoryTrick": "Metals LOSE electrons (cations) — Non-metals GAIN electrons (anions) — Metalloids do BOTH",
+          "keyPoints": [
+            "Metals: tend to lose electrons → form positive ions (cations). Examples: Fe, Cu, Au, Ag",
+            "Non-metals: tend to gain electrons → form negative ions (anions). Examples: Cl, S, P",
+            "Metalloids: properties of both metals and non-metals — lie along stair-step line",
+            "Stair-step line: begins at Boron (B), ends at Polonium (Po)",
+            "Metalloids: B, Si, Ge, As, Sb, Te, Po",
+            "EXCEPTION: Hydrogen is a non-metal despite being in Group 1 (far left)"
+          ],
+          "examTips": [
+            "All 7 metalloids: B, Si, Ge, As, Sb, Te, Po — memorize all, missing one costs marks",
+            "Hydrogen = non-metal (common trap question)",
+            "Tellurium (Te) is a metalloid, NOT a non-metal"
+          ]
+        },
+        {
+          "id": "1.4",
+          "title": "s, p, d, f Blocks of the Periodic Table",
+          "memoryTrick": "s1-2, p13-18, d3-12, f at the bottom",
+          "keyPoints": [
+            "s-Block: Groups 1–2; valence electrons in s-subshell; includes alkali metals + alkaline earth metals. Example: Na = 1s²2s²2p⁶3s¹",
+            "p-Block: Groups 13–18; valence electrons in p-subshell; includes non-metals, metalloids, noble gases. Example: Cl = 1s²2s²2p⁶3s²3p⁵",
+            "d-Block: Groups 3–12; valence electrons in d-subshell; transition metals. Exhibit variable oxidation states + colored compounds",
+            "f-Block: valence electrons in f-subshell; Lanthanides (Z=57–71) + Actinides (Z=89–103); placed at bottom of table"
+          ],
+          "examTips": [
+            "d-Block is Groups 3–12 (NOT 1–12 — common mistake)",
+            "f-Block = lanthanides + actinides (28 elements total)",
+            "Noble gases are p-block (Group 18)"
+          ]
+        },
+        {
+          "id": "1.5",
+          "title": "Families of the Periodic Table",
+          "families": [
+            {
+              "name": "Alkali Metals",
+              "group": "Group 1",
+              "elements": "Li, Na, K, Rb, Cs, Fr",
+              "valenceElectrons": 1,
+              "traits": ["Most reactive metals", "1 valence electron", "React vigorously with water to form alkalis + H₂", "2Na + 2H₂O → 2NaOH + H₂"]
+            },
+            {
+              "name": "Alkaline Earth Metals",
+              "group": "Group 2",
+              "elements": "Be, Mg, Ca, Sr, Ba, Ra",
+              "valenceElectrons": 2,
+              "traits": ["2 valence electrons", "Less reactive than alkali metals", "Found in earth's crust", "Form alkalis"]
+            },
+            {
+              "name": "Transition Metals",
+              "group": "Groups 3–12 (d-block + f-block)",
+              "elements": "Cr, Fe, Co, Ni, Cu, Zn (examples)",
+              "valenceElectrons": "variable",
+              "traits": ["Largest family", "Variable oxidation states", "Mostly form coloured compounds", "Include 4 d-block series + lanthanides + actinides"]
+            },
+            {
+              "name": "Chalcogens",
+              "group": "Group 16",
+              "elements": "O, S, Se, Te, Po, Lv",
+              "valenceElectrons": 6,
+              "traits": ["Name from Greek 'chalkos' (copper) — most copper ores are oxides/sulfides", "O, S = non-metals; Se, Te, Po = metalloids; Lv = metal"]
+            },
+            {
+              "name": "Halogens",
+              "group": "Group 17",
+              "elements": "F, Cl, Br, I, At, Ts",
+              "valenceElectrons": 7,
+              "traits": ["Name means 'salt-former'", "Highly reactive non-metals", "High electron affinities", "Gain 1 electron to complete outer shell"]
+            },
+            {
+              "name": "Noble Gases",
+              "group": "Group 18",
+              "elements": "He, Ne, Ar, Kr, Xe, Rn, Og",
+              "valenceElectrons": "8 (2 for He)",
+              "traits": ["Complete outermost shells — almost entirely unreactive", "CAN form compounds: Xe forms XePtF₆ (why name changed from 'inert gases' to 'noble gases')"]
+            }
+          ]
+        },
+        {
+          "id": "1.6",
+          "title": "Electronic Configuration and Periodic Table Position",
+          "keyPoints": [
+            "Period number = principal quantum number (n) = number of electron shells",
+            "Group number = number of valence electrons (for main group elements)",
+            "Block = which subshell holds the valence electrons"
+          ],
+          "examples": [
+            { "description": "Group 2, Period 3 → Magnesium (Mg)", "config": "1s² | 2s²2p⁶ | 3s²" },
+            { "description": "Group 13, Period 3 → Aluminium (Al)", "config": "1s² | 2s²2p⁶ | 3s²3p¹" },
+            { "description": "Group 17, Period 4 → Bromine (Br)", "config": "1s²2s²2p⁶3s²3p⁶3d¹⁰4s²4p⁵" }
+          ]
+        },
+        {
+          "id": "1.7",
+          "title": "Atomic Radius and Ionic Radius",
+          "keyPoints": [
+            "Atomic radius: half the distance between two identical bonded atoms. Unit: picometer (pm) or Angstrom (Å)",
+            "Factors: number of shells (more shells → larger), nuclear charge (greater charge → smaller), shielding effect (more inner electrons → larger)",
+            "Across period (left→right): DECREASES — nuclear charge increases, shells constant, electrons pulled closer",
+            "Down group (top→bottom): INCREASES — additional shells added, shielding increases",
+            "Example across period: Li > Be > B > C > N > O > F",
+            "Example down group: Li < Na < K < Rb < Cs",
+            "Cation (positive ion): SMALLER than parent atom — loses electrons, may lose entire shell, remaining electrons pulled more tightly. Example: Na(186 pm) → Na⁺(95 pm)",
+            "Anion (negative ion): LARGER than parent atom — gains electrons, increases repulsion, cloud expands. Example: Cl(99 pm) → Cl⁻(181 pm)"
+          ],
+          "examTips": [
+            "Atomic radius DECREASES across a period (common wrong answer: increases)",
+            "Anion is LARGER than neutral atom (common wrong answer: smaller)",
+            "Always specify reason: nuclear charge / shielding / shells"
+          ]
+        },
+        {
+          "id": "1.8",
+          "title": "Ionization Energy",
+          "definition": "The energy needed to remove one electron from each atom in one mole of gaseous atoms to form one mole of gaseous 1+ ions.",
+          "equation": "Na₍g₎ → Na⁺₍g₎ + e⁻  ΔHᵢ₁ = +494 kJ mol⁻¹",
+          "factors": [
+            "Nuclear charge: greater charge → electrons held more tightly → higher IE",
+            "Atomic size: larger atom → outer electrons farther away → lower IE",
+            "Electronic arrangement: half-filled/fully-filled subshells are extra stable → higher IE",
+            "Shielding effect: more inner electrons → greater shielding → lower IE",
+            "Spin-pair repulsion: paired electrons repel each other → slightly easier to remove → lower IE"
+          ],
+          "trends": {
+            "acrossPeriod": "Generally INCREASES left to right — nuclear charge increases, atomic size decreases",
+            "downGroup": "DECREASES — atomic size increases, shielding increases",
+            "example": "Group 1: Li > Na > K > Rb > Cs"
+          },
+          "anomalies": [
+            "IE(Al) < IE(Mg): Al's 3p¹ electron is in a higher-energy subshell than Mg's fully-filled 3s² — easier to remove",
+            "IE(O) < IE(N): N has half-filled 2p³ (extra stable). O has paired 2p electron (spin-pair repulsion → easier to remove). IE(N) = 1403 kJ/mol; IE(O) = 1365 kJ/mol"
+          ],
+          "examTips": [
+            "Definition must include 'gaseous state' and 'one mole' — examiners check this",
+            "Include state symbols in all equations",
+            "O vs N anomaly: N half-filled 2p³ is extra stable (most common exam question)"
+          ]
+        },
+        {
+          "id": "1.9",
+          "title": "Electron Affinity and Electronegativity",
+          "electronAffinity": {
+            "definition": "The enthalpy change when 1 mole of electrons is added to 1 mole of gaseous atoms to form 1 mole of gaseous uni-negative ions under standard conditions.",
+            "example": "Cl₍g₎ + e⁻ → Cl⁻₍g₎  ΔH°ₑₐ₁ = –348.8 kJ mol⁻¹",
+            "signConvention": "First EA = negative (energy released, exothermic). Second EA = positive (energy absorbed — anion repels incoming electron).",
+            "trends": "Across period: generally becomes more negative (increases). Down group: decreases (less negative).",
+            "anomaly": "F has LOWER electron affinity than Cl despite being smaller. Reason: F has extremely compact 2p orbitals — intense electron-electron repulsion when extra electron added. Cl has larger 3p orbitals with less repulsion. EA values: Cl(–349) > F(–328) > Br(–324) > I(–295) > At(–270) kJ/mol",
+            "examTips": [
+              "First EA = NEGATIVE sign (energy released) — do not write positive",
+              "Second EA of oxygen = POSITIVE (+844 kJ/mol) — repulsion from O⁻",
+              "F vs Cl anomaly = compact 2p orbitals causing repulsion (not just 'size')"
+            ]
+          },
+          "electronegativity": {
+            "definition": "The power of an atom to attract a shared pair of electrons toward itself in a molecule. (Pauling scale, dimensionless)",
+            "values": {
+              "minimum": "0.8 (Cs, Fr)",
+              "maximum": "4.0 (F — highest of all elements)",
+              "period2": { "Li": 1.0, "Be": 1.5, "B": 2.0, "C": 2.5, "N": 3.0, "O": 3.5, "F": 4.0 }
+            },
+            "trends": "Across period: INCREASES (nuclear charge up, atomic size down). Down group: DECREASES (atomic size up, shielding up).",
+            "metallic": "Low EN = metallic character (electropositive). High EN = non-metallic character (electronegative). Cs (EN=0.8) = most reactive metal. F (EN=4.0) = most reactive non-metal.",
+            "examTips": [
+              "Must mention 'Pauling' scale in answers",
+              "F = 4.0 (maximum); Cs/Fr = 0.8 (minimum)",
+              "EN INCREASES across period (common wrong answer: decreases)"
+            ]
+          }
+        },
+        {
+          "id": "1.10",
+          "title": "Reactions of Na and Mg, Oxides, Chlorides, and Oxidation Numbers",
+          "reactions": {
+            "withWater": [
+              { "reactant": "Na + cold water", "equation": "2Na₍s₎ + 2H₂O₍l₎ → 2NaOH₍aq₎ + H₂₍g₎", "notes": "Vigorous; NaOH is strongly basic (pH > 7)" },
+              { "reactant": "Mg + cold water", "equation": "Mg₍s₎ + 2H₂O₍l₎ → Mg(OH)₂₍aq₎ + H₂₍g₎", "notes": "Slow reaction" },
+              { "reactant": "Mg + steam", "equation": "Mg₍s₎ + 2H₂O₍g₎ → MgO₍s₎ + 2H₂₍g₎", "notes": "Vigorous; different product (MgO not Mg(OH)₂)" }
+            ],
+            "withOxygen": [
+              { "reactant": "Na + excess O₂", "equation": "2Na₍s₎ + O₂₍g₎ → 2Na₂O₂₍s₎", "notes": "MAIN product = sodium PEROXIDE (Na₂O₂) — golden yellow flame. Na kept under kerosene oil." },
+              { "reactant": "Na + limited O₂", "equation": "4Na₍s₎ + O₂₍g₎ → 2Na₂O₍s₎", "notes": "Only under limited O₂ or high temperature" },
+              { "reactant": "Mg + O₂", "equation": "2Mg₍s₎ + O₂₍g₎ → 2MgO₍s₎", "notes": "Intense WHITE flame; MgO used in fireworks and SOS flares" }
+            ],
+            "withChlorine": [
+              { "reactant": "Na + Cl₂", "equation": "2Na₍s₎ + Cl₂₍g₎ → 2NaCl₍s₎", "notes": "Exothermic; golden yellow flame" },
+              { "reactant": "Mg + Cl₂", "equation": "Mg₍s₎ + Cl₂₍g₎ → MgCl₂₍s₎", "notes": "White solid magnesium chloride" }
+            ]
+          },
+          "oxideClassification": {
+            "basic": { "description": "React with water → alkali (base); ionic; formed by metals", "examples": ["Na₂O + H₂O → 2NaOH (strongly basic, pH > 7)", "MgO + H₂O → Mg(OH)₂"] },
+            "acidic": { "description": "React with water → acid; covalent; formed by non-metals", "examples": ["SO₂ + H₂O → H₂SO₃ (sulfurous acid)", "SO₃ + H₂O → H₂SO₄ (sulfuric acid)", "P₂O₃ + 3H₂O → 2H₃PO₃"] },
+            "amphoteric": { "description": "React with BOTH acids AND bases", "example": "Al₂O₃", "reactions": ["Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O (acts as base)", "Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O (acts as acid)"] }
+          },
+          "bondingTrend": "Groups 1–3: ionic oxides/chlorides. Groups 4–7: covalent oxides/chlorides. Increasing covalent character left to right.",
+          "oxidationNumbers": {
+            "explanation": "Oxidation number in Period 3 oxides increases from +1 (Na) to +6 (S), matching the group number",
+            "oxides": [
+              { "compound": "Na₂O", "element": "Na", "ox": "+1" },
+              { "compound": "MgO", "element": "Mg", "ox": "+2" },
+              { "compound": "Al₂O₃", "element": "Al", "ox": "+3" },
+              { "compound": "SiO₂", "element": "Si", "ox": "+4" },
+              { "compound": "P₄O₁₀", "element": "P", "ox": "+5" },
+              { "compound": "SO₃", "element": "S", "ox": "+6" },
+              { "compound": "SO₂", "element": "S", "ox": "+4" }
+            ],
+            "variableOxidation": "P and S show variable oxidation states by expanding their octet using empty 3d orbitals (Period 3 can exceed octet). P: +3 (PCl₃) and +5 (PCl₅). S: +4 (SO₂) and +6 (SO₃)."
+          }
+        }
+      ],
+      "shortQuestions": [
+        {
+          "id": "sq1",
+          "question": "State the Modern Periodic Law.",
+          "answer": "The Modern Periodic Law states that the physical and chemical properties of elements are periodic functions of their atomic numbers.",
+          "markingPoints": ["Correct statement of the law", "Must say 'atomic numbers' not 'atomic masses'"],
+          "examTip": "Writing 'atomic mass' instead of 'atomic number' is the #1 reason this question loses marks."
+        },
+        {
+          "id": "sq2",
+          "question": "State Döbereiner's Law of Triads with an example.",
+          "answer": "Döbereiner grouped elements into sets of three (triads) with similar properties, in which the atomic mass of the middle element was approximately the average of the other two. Example: Li(7), Na(23), K(39) → (7+39)/2 = 23 ✓",
+          "markingPoints": ["Definition of triad", "Correct example with calculation"],
+          "examTip": "Always include the Li/Na/K numerical example — bare definitions are marked incomplete."
+        },
+        {
+          "id": "sq3",
+          "question": "State Newlands' Law of Octaves.",
+          "answer": "When 62 known elements were arranged in increasing order of atomic masses, Newlands observed that every eighth element resembled the first element in properties, similar to musical octaves.",
+          "markingPoints": ["Mention '62 elements' and 'increasing atomic mass'", "Mention 'every eighth element resembles the first'"],
+          "examTip": "The number '62' and the word 'eighth' are the two exact details examiners check."
+        },
+        {
+          "id": "sq4",
+          "question": "What was Lothar Meyer's contribution to the periodic table?",
+          "answer": "Lothar Meyer plotted a graph between the atomic weight and atomic volume of elements; the resulting curves showed periodicity in physical properties.",
+          "markingPoints": ["Mention 'atomic weight vs atomic volume' graph", "Mention 'periodicity' was observed"],
+          "examTip": "Don't confuse with Mendeleev's table — Lothar Meyer's contribution is specifically about graphical curves."
+        },
+        {
+          "id": "sq5",
+          "question": "How did Moseley modify Mendeleev's Periodic Law?",
+          "answer": "Using X-ray emission spectra, Moseley determined exact atomic numbers and rearranged elements by atomic number instead of atomic mass, resolving Mendeleev's discrepancies. He modified the law: properties are periodic functions of atomic numbers.",
+          "markingPoints": ["Mention 'X-ray emission' and 'atomic number'", "Resolution of discrepancies + new law statement"],
+          "examTip": "Always connect Moseley's work directly to the statement of Modern Periodic Law."
+        },
+        {
+          "id": "sq6",
+          "question": "How many periods and groups are in the modern periodic table?",
+          "answer": "The modern periodic table has 7 horizontal periods and 18 vertical groups, containing 118 elements.",
+          "markingPoints": ["7 periods", "18 groups"],
+          "examTip": "Near-guaranteed 2-mark question — memorize '7 periods, 18 groups, 118 elements.'"
+        },
+        {
+          "id": "sq7",
+          "question": "Why do elements in the same group show similar chemical properties?",
+          "answer": "Elements in the same group have the same number of valence electrons, which primarily determines an element's chemical behaviour — therefore group members show similar chemical properties.",
+          "markingPoints": ["Same number of valence electrons", "Link to similar chemical properties"],
+          "examTip": "Add: physical properties still change gradually down the group — earns bonus marks."
+        },
+        {
+          "id": "sq8",
+          "question": "Define atomic radius. State its trend across a period and down a group.",
+          "answer": "Atomic radius is half the distance between two identical bonded atoms (unit: pm or Å). Across a period: decreases (nuclear charge increases, shells constant, electrons pulled closer). Down a group: increases (additional shells added, shielding increases).",
+          "markingPoints": ["Correct definition with unit", "Correct trend across period with reason", "Correct trend down group with reason"],
+          "examTip": "State the REASON for each trend — just naming the trend without reason loses a mark."
+        },
+        {
+          "id": "sq9",
+          "question": "Why is the cation smaller than the parent atom?",
+          "answer": "When an atom loses electrons to form a cation, it may lose an entire electron shell, and the remaining electrons experience a stronger effective nuclear charge (same number of protons, fewer electrons). This pulls electrons closer → smaller size. Example: Na (186 pm) → Na⁺ (95 pm).",
+          "markingPoints": ["May lose electron shell", "Greater effective nuclear charge on remaining electrons", "Numerical example"],
+          "examTip": "Include numerical values (pm) — they earn extra marks."
+        },
+        {
+          "id": "sq10",
+          "question": "Why is the anion larger than the parent atom?",
+          "answer": "When an atom gains electrons to form an anion, the additional electrons increase electron-electron repulsion, causing the electron cloud to expand. The nuclear charge remains the same but now holds more electrons less tightly. Example: Cl (99 pm) → Cl⁻ (181 pm).",
+          "markingPoints": ["Increased electron-electron repulsion", "Same nuclear charge, more electrons", "Numerical example"],
+          "examTip": "The most common wrong answer is saying anion is smaller — it is LARGER."
+        },
+        {
+          "id": "sq11",
+          "question": "Define ionization energy. Give the equation for first ionization energy of Na.",
+          "answer": "Ionization energy is the energy needed to remove one electron from each atom in one mole of gaseous atoms to form one mole of gaseous 1+ ions. Na₍g₎ → Na⁺₍g₎ + e⁻, ΔHᵢ₁ = +494 kJ mol⁻¹",
+          "markingPoints": ["Must say 'gaseous state' and 'one mole'", "Correct balanced equation with state symbols and ΔH value"],
+          "examTip": "Missing 'gaseous state' or forgetting state symbols are the top two errors on this question."
+        },
+        {
+          "id": "sq12",
+          "question": "Why does O have lower first ionization energy than N?",
+          "answer": "N: 1s²2s²2pₓ¹2pᵧ¹2p_z¹ — half-filled 2p subshell → extra stable. O: 1s²2s²2pₓ²2pᵧ¹2p_z¹ — one 2p orbital has a paired electron → spin-pair repulsion makes it slightly easier to remove. Therefore IE(N)=1403 kJ/mol > IE(O)=1365 kJ/mol.",
+          "markingPoints": ["Write electronic configurations of N and O", "State half-filled 2p stability for N", "State spin-pair repulsion for O", "Include IE values"],
+          "examTip": "Most common exam anomaly question — must include configurations AND IE numerical values."
+        },
+        {
+          "id": "sq13",
+          "question": "Define electron affinity. Why is the first EA negative but second EA positive?",
+          "answer": "Electron affinity is the enthalpy change when 1 mole of electrons is added to 1 mole of gaseous atoms to form 1 mole of gaseous uni-negative ions. First EA is negative (energy released — exothermic) as the electron is attracted to the nucleus. Second EA is positive (energy absorbed — endothermic) because the negatively charged anion repels the incoming electron.",
+          "markingPoints": ["Correct definition with 'gaseous' and 'standard conditions'", "First EA = negative (exothermic)", "Second EA = positive (anion repels incoming electron)"],
+          "examTip": "Writing positive sign for first EA is a guaranteed mark loss."
+        },
+        {
+          "id": "sq14",
+          "question": "Why does F have lower electron affinity than Cl, despite being smaller?",
+          "answer": "Although smaller size usually means higher electron affinity, F has extremely compact 2p orbitals. When an extra electron approaches, it experiences intense electron-electron repulsion in the small 2p orbitals. Cl has larger 3p orbitals with less repulsion. Therefore EA(Cl) = –349 kJ/mol > EA(F) = –328 kJ/mol.",
+          "markingPoints": ["Mention compact/small 2p orbitals", "State electron-electron repulsion", "Include EA values"],
+          "examTip": "Just saying 'repulsion' without mentioning 'compact 2p orbitals' is an incomplete answer."
+        },
+        {
+          "id": "sq15",
+          "question": "Define electronegativity. State its trend across a period and down a group.",
+          "answer": "Electronegativity (Pauling) is the power of an atom to attract a shared pair of electrons toward itself in a molecule. Across a period: increases (nuclear charge increases, atomic size decreases). Down a group: decreases (atomic size increases, shielding increases). F has maximum EN = 4.0; Cs/Fr have minimum EN = 0.8.",
+          "markingPoints": ["Pauling definition", "Correct trend across period with reason", "Correct trend down group with reason", "F=4.0, Cs=0.8"],
+          "examTip": "Must mention 'Pauling' and include numerical EN values."
+        },
+        {
+          "id": "sq16",
+          "question": "What is an amphoteric oxide? Give an example with equations.",
+          "answer": "An amphoteric oxide can react with both acids and bases. Example: Al₂O₃. With acid: Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O. With base: Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O.",
+          "markingPoints": ["Definition: reacts with both acid and base", "Both equations with correct products and state symbols"],
+          "examTip": "Product with NaOH is NaAlO₂ (NOT NaAlO₃ — very common mistake)."
+        },
+        {
+          "id": "sq17",
+          "question": "What are the main products when Na reacts with excess oxygen?",
+          "answer": "When Na burns in excess oxygen, the MAIN product is sodium peroxide: 2Na₍s₎ + O₂₍g₎ → 2Na₂O₂₍s₎. Under limited O₂: 4Na + O₂ → 2Na₂O (sodium oxide). Na is stored under kerosene oil to prevent this reaction in air.",
+          "markingPoints": ["Correct main product: Na₂O₂ (not Na₂O)", "Balanced equation with state symbols", "Mention kerosene storage"],
+          "examTip": "Na₂O₂ is the MAIN product in excess O₂ — writing Na₂O is the most common error."
+        },
+        {
+          "id": "sq18",
+          "question": "Name the 7 metalloids and explain what the stair-step line represents.",
+          "answer": "Metalloids: B, Si, Ge, As, Sb, Te, Po. The stair-step line is a diagonal line from Boron (B) to Polonium (Po) that separates metals (left) from non-metals (right). Elements along this line have properties of both metals and non-metals.",
+          "markingPoints": ["All 7 metalloids named correctly", "Description of stair-step line"],
+          "examTip": "Missing even ONE metalloid costs the full mark."
+        },
+        {
+          "id": "sq19",
+          "question": "Why do P and S show variable oxidation states?",
+          "answer": "P and S are Period 3 p-block elements with available empty 3d orbitals. They can promote electrons into these d orbitals, expanding their valence shell beyond 8 electrons (octet expansion). P: +3 (PCl₃) and +5 (PCl₅). S: +4 (SO₂) and +6 (SO₃).",
+          "markingPoints": ["Mention 'empty 3d orbitals'", "Octet expansion concept", "Examples of each oxidation state"],
+          "examTip": "This concept (3d orbital expansion) is unique to Period 3+ elements — Period 2 (like N, O) cannot do this."
+        },
+        {
+          "id": "sq20",
+          "question": "Compare the reactivity of Na and Mg and give reasons.",
+          "answer": "Na is more reactive than Mg because: (1) Na has only 1 valence electron (easier to lose) while Mg has 2; (2) Na has lower ionization energy (IE₁=494 kJ/mol) vs Mg (IE₁+IE₂ needed); (3) Na has higher metallic character. Na reacts vigorously with cold water; Mg reacts slowly with cold water but vigorously with steam.",
+          "markingPoints": ["Valence electrons comparison", "Ionization energy values", "Higher metallic character for Na"],
+          "examTip": "Always give the chemical REASON, not just state 'Na is more reactive.'"
+        }
+      ],
+      "mcqs": [
+        {
+          "id": "mcq1",
+          "question": "Which scientist is credited with determining exact atomic numbers of elements using X-ray emission?",
+          "options": ["A. Dmitri Mendeleev", "B. John Newlands", "C. Henry Moseley", "D. Lothar Meyer"],
+          "correct": "C",
+          "explanation": "Henry Moseley (1913) used X-ray emission spectra to determine exact atomic numbers and modified the Periodic Law to state that properties are periodic functions of atomic numbers, not atomic masses.",
+          "whyWrong": { "A": "Mendeleev arranged by atomic mass, not atomic number", "B": "Newlands observed octaves in 62 elements by atomic mass", "D": "Meyer plotted atomic weight vs atomic volume curves" }
+        },
+        {
+          "id": "mcq2",
+          "question": "In Döbereiner's triads, the atomic mass of the middle element of Li, Na, K is:",
+          "options": ["A. 20", "B. 23", "C. 25", "D. 19"],
+          "correct": "B",
+          "explanation": "Average of Li(7) and K(39) = (7+39)/2 = 46/2 = 23, which equals the atomic mass of Na. This confirms Döbereiner's law.",
+          "whyWrong": { "A": "Incorrect arithmetic", "C": "Incorrect arithmetic", "D": "Incorrect arithmetic" }
+        },
+        {
+          "id": "mcq3",
+          "question": "The Modern Periodic Law states that properties of elements are periodic functions of their:",
+          "options": ["A. Atomic mass", "B. Atomic number", "C. Number of neutrons", "D. Number of electron shells"],
+          "correct": "B",
+          "explanation": "Moseley's Modified Periodic Law: 'The physical and chemical properties of elements are periodic functions of their atomic numbers.'",
+          "whyWrong": { "A": "This was Mendeleev's basis — now superseded", "C": "Neutrons do not determine chemical properties", "D": "Shells are a consequence of atomic number, not the basis" }
+        },
+        {
+          "id": "mcq4",
+          "question": "How many periods and groups are there in the modern periodic table?",
+          "options": ["A. 8 periods, 18 groups", "B. 7 periods, 16 groups", "C. 7 periods, 18 groups", "D. 6 periods, 18 groups"],
+          "correct": "C",
+          "explanation": "The modern periodic table has exactly 7 horizontal rows (periods) and 18 vertical columns (groups), containing 118 elements.",
+          "whyWrong": { "A": "8 periods is incorrect", "B": "16 groups is incorrect", "D": "6 periods is incomplete" }
+        },
+        {
+          "id": "mcq5",
+          "question": "The term 'halogen' means:",
+          "options": ["A. Salt destroyer", "B. Salt former", "C. Metal former", "D. Alkali producer"],
+          "correct": "B",
+          "explanation": "'Halogen' is derived from Greek meaning 'salt-former' because these elements readily react with alkali and alkaline earth metals to form salts (e.g., NaCl, MgCl₂).",
+          "whyWrong": { "A": "Opposite meaning", "C": "Unrelated to halogen chemistry", "D": "Unrelated" }
+        },
+        {
+          "id": "mcq6",
+          "question": "Transition metals belong to which block of the periodic table?",
+          "options": ["A. s-block", "B. p-block", "C. d-block", "D. f-block"],
+          "correct": "C",
+          "explanation": "Transition metals occupy Groups 3–12 and their valence electrons are in the d-subshell, placing them in the d-block.",
+          "whyWrong": { "A": "s-block = Groups 1 and 2", "B": "p-block = Groups 13–18", "D": "f-block = Lanthanides and Actinides" }
+        },
+        {
+          "id": "mcq7",
+          "question": "Which ion is LARGER than its parent neutral atom?",
+          "options": ["A. Na⁺", "B. Mg²⁺", "C. Al³⁺", "D. Cl⁻"],
+          "correct": "D",
+          "explanation": "Cl⁻ gains one electron, increasing electron-electron repulsion and expanding the electron cloud. Anions are always larger than their parent atoms. Na⁺, Mg²⁺, Al³⁺ are cations — smaller than parent atoms.",
+          "whyWrong": { "A": "Cation — smaller than parent", "B": "Cation — smaller than parent", "C": "Cation — smaller than parent" }
+        },
+        {
+          "id": "mcq8",
+          "question": "The electron affinity of F is less negative than Cl because:",
+          "options": ["A. F has lower nuclear charge than Cl", "B. F has a larger atomic radius than Cl", "C. F has compact 2p orbitals causing intense electron-electron repulsion", "D. F has a completely filled valence shell"],
+          "correct": "C",
+          "explanation": "Despite F being smaller (which normally increases EA), its extremely compact 2p orbitals create intense inter-electron repulsion when an additional electron is added, reducing energy released. Cl's larger 3p orbitals accommodate the electron with less repulsion.",
+          "whyWrong": { "A": "F has lower nuclear charge but that is not the reason", "B": "F has SMALLER radius, not larger", "D": "F has 7 valence electrons, not a full shell" }
+        },
+        {
+          "id": "mcq9",
+          "question": "Which oxide of Period 3 is amphoteric?",
+          "options": ["A. Na₂O", "B. MgO", "C. Al₂O₃", "D. SiO₂"],
+          "correct": "C",
+          "explanation": "Al₂O₃ is the classic amphoteric oxide — it reacts with HCl (acting as base) and with NaOH (acting as acid). It represents the boundary between metallic and non-metallic character in Period 3.",
+          "whyWrong": { "A": "Na₂O is strongly basic", "B": "MgO is basic", "D": "SiO₂ is acidic" }
+        },
+        {
+          "id": "mcq10",
+          "question": "When Al₂O₃ reacts with NaOH, the product formed is:",
+          "options": ["A. NaAlO₃", "B. NaAlO₂", "C. Al(OH)₃", "D. Na₂AlO₄"],
+          "correct": "B",
+          "explanation": "Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O. Sodium aluminate (NaAlO₂) is the correct product when amphoteric Al₂O₃ acts as an acid with NaOH.",
+          "whyWrong": { "A": "NaAlO₃ is incorrect formula", "C": "Al(OH)₃ forms from AlCl₃ with water", "D": "Na₂AlO₄ is incorrect" }
+        },
+        {
+          "id": "mcq11",
+          "question": "The oxidation state of sulfur in SO₃ is:",
+          "options": ["A. +2", "B. +4", "C. +6", "D. +8"],
+          "correct": "C",
+          "explanation": "In SO₃: x + 3(–2) = 0 → x = +6. All six valence electrons of sulfur are used in bonding with three oxygen atoms.",
+          "whyWrong": { "A": "+2 = oxidation state of S in SCl₂", "B": "+4 = oxidation state of S in SO₂", "D": "+8 exceeds maximum possible for sulfur" }
+        },
+        {
+          "id": "mcq12",
+          "question": "Going down Group 1, the ionization energy:",
+          "options": ["A. Increases", "B. Decreases", "C. Remains constant", "D. First increases then decreases"],
+          "correct": "B",
+          "explanation": "Going down Group 1 (Li→Na→K→Rb→Cs), atomic size increases and shielding effect increases. Both factors make it easier to remove the outermost electron, so IE decreases: Li > Na > K > Rb > Cs.",
+          "whyWrong": { "A": "Opposite of correct trend", "C": "IE never remains constant", "D": "No such pattern exists for Group 1" }
+        },
+        {
+          "id": "mcq13",
+          "question": "Which element in Period 3 reacts MOST vigorously with water?",
+          "options": ["A. Mg", "B. Al", "C. Na", "D. Si"],
+          "correct": "C",
+          "explanation": "Sodium (Na) is a Group 1 alkali metal with one valence electron and the lowest ionization energy in Period 3. It reacts vigorously with cold water: 2Na + 2H₂O → 2NaOH + H₂.",
+          "whyWrong": { "A": "Mg reacts slowly with cold water, vigorously only with steam", "B": "Al forms protective oxide layer and barely reacts", "D": "Si does not react with water under normal conditions" }
+        },
+        {
+          "id": "mcq14",
+          "question": "The electron configuration 1s²2s²2p⁶3s²3p¹ belongs to which element?",
+          "options": ["A. Magnesium", "B. Silicon", "C. Aluminium", "D. Sodium"],
+          "correct": "C",
+          "explanation": "Counting electrons: 2+2+6+2+1 = 13 → Atomic number 13 = Aluminium (Al). Period 3 (3rd shell), Group 13 (3 valence electrons).",
+          "whyWrong": { "A": "Mg = 1s²2s²2p⁶3s² (12 electrons)", "B": "Si = 1s²2s²2p⁶3s²3p² (14 electrons)", "D": "Na = 1s²2s²2p⁶3s¹ (11 electrons)" }
+        },
+        {
+          "id": "mcq15",
+          "question": "Across a period from left to right, electronegativity:",
+          "options": ["A. Decreases due to increasing atomic size", "B. Increases due to increasing nuclear charge and decreasing atomic size", "C. Remains constant", "D. Increases due to increasing atomic size"],
+          "correct": "B",
+          "explanation": "Across a period, nuclear charge increases while atomic size decreases. Both factors cause the bonded electron pair to be attracted more strongly toward the atom, increasing electronegativity.",
+          "whyWrong": { "A": "Atomic size DECREASES across a period", "C": "EN never remains constant", "D": "Atomic size actually decreases, not increases" }
+        },
+        {
+          "id": "mcq16",
+          "question": "The electronegativity of fluorine on the Pauling scale is:",
+          "options": ["A. 3.5", "B. 4.5", "C. 4.0", "D. 3.0"],
+          "correct": "C",
+          "explanation": "Fluorine has the highest electronegativity of all elements on the Pauling scale = 4.0. It is the smallest atom in its group with the highest effective nuclear charge for its size.",
+          "whyWrong": { "A": "3.5 is the EN of Oxygen", "B": "4.5 exceeds the maximum on Pauling scale", "D": "3.0 is the EN of Chlorine" }
+        },
+        {
+          "id": "mcq17",
+          "question": "Magnesium reacts with steam to produce:",
+          "options": ["A. Mg(OH)₂ and H₂", "B. MgO and H₂", "C. MgO and O₂", "D. MgCl₂ and H₂"],
+          "correct": "B",
+          "explanation": "Mg₍s₎ + 2H₂O₍g₎ → MgO₍s₎ + 2H₂₍g₎. With steam, Mg produces magnesium oxide and hydrogen gas. Cold water gives Mg(OH)₂.",
+          "whyWrong": { "A": "Mg(OH)₂ is produced with COLD water, not steam", "C": "O₂ is not produced", "D": "Cl is not present" }
+        },
+        {
+          "id": "mcq18",
+          "question": "Which Period 3 element forms sodium peroxide when burned in excess oxygen?",
+          "options": ["A. Mg", "B. Na", "C. Al", "D. Si"],
+          "correct": "B",
+          "explanation": "Sodium (Na) uniquely forms sodium peroxide (Na₂O₂) as the main product: 2Na + O₂ → 2Na₂O₂. Mg forms MgO; Al forms Al₂O₃; Si forms SiO₂.",
+          "whyWrong": { "A": "Mg forms MgO (oxide), not peroxide", "C": "Al forms Al₂O₃", "D": "Si forms SiO₂" }
+        },
+        {
+          "id": "mcq19",
+          "question": "P and S show variable oxidation states because they can:",
+          "options": ["A. Lose electrons from the s subshell", "B. Expand their octet using empty 3d orbitals", "C. Form ionic compounds with variable charges", "D. Accept electrons from the 3p subshell"],
+          "correct": "B",
+          "explanation": "Phosphorus and Sulfur (Period 3) have available empty 3d orbitals. They can promote electrons into these d orbitals, expanding their valence shell beyond 8 electrons, allowing multiple oxidation states.",
+          "whyWrong": { "A": "s subshell electrons are not the variable factor", "C": "P and S form predominantly covalent compounds", "D": "3d is where expansion occurs, not 3p" }
+        },
+        {
+          "id": "mcq20",
+          "question": "The metallic character of elements across a period from left to right:",
+          "options": ["A. Increases", "B. Decreases", "C. Remains constant", "D. First decreases then increases"],
+          "correct": "B",
+          "explanation": "As nuclear charge increases across a period, it becomes harder for atoms to lose electrons. The tendency to lose electrons (metallic character) therefore decreases from left to right.",
+          "whyWrong": { "A": "Metallic character DECREASES across period", "C": "It never remains constant", "D": "No such pattern — it monotonically decreases" }
+        },
+        {
+          "id": "mcq21",
+          "question": "Chalcogens are elements of Group:",
+          "options": ["A. 15", "B. 16", "C. 17", "D. 18"],
+          "correct": "B",
+          "explanation": "Chalcogens are Group 16 elements: O, S, Se, Te, Po, Lv. The name comes from Greek 'chalkos' meaning copper, as most copper ores are oxides or sulfides.",
+          "whyWrong": { "A": "Group 15 = Pnictogens (N, P, As, Sb, Bi)", "C": "Group 17 = Halogens", "D": "Group 18 = Noble gases" }
+        },
+        {
+          "id": "mcq22",
+          "question": "Noble gases were previously called 'inert gases.' The reason this name was changed is:",
+          "options": ["A. They were found to be very reactive", "B. Xenon forms compounds like XePtF₆", "C. They were discovered to have electrons", "D. They react vigorously with halogens"],
+          "correct": "B",
+          "explanation": "The discovery that Xenon can form xenon hexafluoroplatinate (XePtF₆) proved noble gases are not completely inert. Therefore 'inert gases' was changed to 'noble gases'.",
+          "whyWrong": { "A": "They are generally very UNreactive", "C": "All atoms always had electrons", "D": "They do not react vigorously with halogens normally" }
+        },
+        {
+          "id": "mcq23",
+          "question": "Which of the following elements belongs to the p-block?",
+          "options": ["A. Calcium (Ca)", "B. Iron (Fe)", "C. Chlorine (Cl)", "D. Barium (Ba)"],
+          "correct": "C",
+          "explanation": "Chlorine is in Group 17 (Groups 13–18 = p-block). Its configuration ends in 3p⁵, confirming p-block membership.",
+          "whyWrong": { "A": "Ca is Group 2 → s-block", "B": "Fe is Group 8 → d-block", "D": "Ba is Group 2 → s-block" }
+        },
+        {
+          "id": "mcq24",
+          "question": "The ionic radius of Na⁺ compared to neutral Na atom is:",
+          "options": ["A. Larger", "B. Smaller", "C. Equal", "D. Depends on temperature"],
+          "correct": "B",
+          "explanation": "Na has configuration [Ne]3s¹. When it loses the 3s¹ electron to form Na⁺, the entire 3rd shell is removed. Remaining electrons are pulled more strongly. Na = 186 pm; Na⁺ = 95 pm.",
+          "whyWrong": { "A": "Cations are SMALLER than parent atoms", "C": "Size changes when electrons are removed", "D": "Temperature is irrelevant" }
+        },
+        {
+          "id": "mcq25",
+          "question": "Why does oxygen have a lower first ionization energy than nitrogen?",
+          "options": ["A. Oxygen has a lower atomic number", "B. Oxygen has one paired 2p electron causing spin-pair repulsion", "C. Nitrogen has larger atomic radius", "D. Oxygen is in the same period as nitrogen"],
+          "correct": "B",
+          "explanation": "N (2p³) has a half-filled 2p subshell (extra stable). O (2p⁴) has one paired 2p electron — spin-pair repulsion makes this electron easier to remove than any of N's unpaired electrons. IE(N)=1403; IE(O)=1365 kJ/mol.",
+          "whyWrong": { "A": "Atomic number alone doesn't determine this anomaly", "C": "Nitrogen has a similar/slightly larger radius than O but that's not the cause", "D": "Same period doesn't explain the anomaly" }
+        }
+      ],
+      "longQuestions": [
+        {
+          "id": "lq1",
+          "question": "Describe the historical development of the Periodic Table. Discuss the contributions of Döbereiner, Newlands, Mendeleev, and Moseley.",
+          "keyPoints": [
+            "Lavoisier: metals vs non-metals classification (18th century)",
+            "Döbereiner (1829): Triads — atomic mass of middle = average of outer two. Example: Li(7), Na(23), K(39). Limitation: applied to few elements only.",
+            "Newlands (1864): Law of Octaves — 62 elements by atomic mass, every 8th element resembled 1st. Limitation: failed for heavier elements.",
+            "Lothar Meyer (1864): atomic weight vs atomic volume graph showing periodicity.",
+            "Mendeleev (1869): 63 elements by atomic mass; left gaps; predicted missing elements (Eka-boron=Scandium). Limitation: Ar/K misplacement by mass.",
+            "Moseley (1913): X-ray emission → atomic number ordering. Modern Periodic Law: properties are periodic functions of atomic numbers.",
+            "Modern table: 118 elements, 7 periods, 18 groups."
+          ],
+          "diagram": "📊 Diagram: Historical Timeline — Lavoisier (18th c.) → Döbereiner (1829) → Newlands (1864) + Meyer (1864) → Mendeleev (1869) → Moseley (1913)",
+          "commonMistakes": [
+            "Confusing Mendeleev (atomic mass) with Moseley (atomic number)",
+            "Forgetting Lothar Meyer entirely",
+            "Not writing Modern Periodic Law word for word",
+            "Missing the Döbereiner numerical verification"
+          ]
+        },
+        {
+          "id": "lq2",
+          "question": "Explain the arrangement of the Periodic Table into s, p, d, and f blocks. Describe the five famous families of elements with properties and examples.",
+          "keyPoints": [
+            "s-Block: Groups 1–2; valence electrons in s-subshell. Example: Na = [Ne]3s¹",
+            "p-Block: Groups 13–18; valence electrons in p-subshell. Example: Cl = [Ne]3s²3p⁵",
+            "d-Block: Groups 3–12; transition metals; variable oxidation states; coloured compounds. Examples: Fe, Cu, Cr",
+            "f-Block: Lanthanides (Z=57–71) + Actinides (Z=89–103); at bottom of table",
+            "Families: Alkali metals (Gp 1, 1 VE, most reactive); Alkaline earth metals (Gp 2, 2 VE); Transition metals (variable OS); Chalcogens (Gp 16); Halogens (Gp 17, salt-formers); Noble gases (Gp 18, complete shells, rarely react)"
+          ],
+          "diagram": "📊 Diagram: Block layout — s-Block (blue, Gp 1–2), p-Block (red, Gp 13–18), d-Block (green, Gp 3–12), f-Block (yellow, two bottom rows)",
+          "commonMistakes": [
+            "d-block group numbers: writing Groups 1–12 instead of 3–12",
+            "Forgetting lanthanides and actinides as f-block",
+            "Forgetting XePtF₆ exception for noble gases"
+          ]
+        },
+        {
+          "id": "lq3",
+          "question": "Define atomic radius and ionic radius. Explain periodic trends across a period and down a group with reasons.",
+          "keyPoints": [
+            "Atomic radius: half the distance between two identical bonded atoms (pm or Å)",
+            "Factors: number of shells, nuclear charge, shielding effect",
+            "Across period: DECREASES — nuclear charge increases, shells constant → electrons pulled closer. Example: Li > Be > B > C > N > O > F",
+            "Down group: INCREASES — additional shells, more shielding. Example: Li < Na < K < Rb < Cs",
+            "Ionic radius: size of ion. Cation SMALLER (loses electrons/shell, greater effective nuclear charge). Na(186)→Na⁺(95 pm). Anion LARGER (gains electrons, more repulsion, cloud expands). Cl(99)→Cl⁻(181 pm)",
+            "Ionic radius trends: both cations and anions increase down a group; decrease across a period"
+          ],
+          "diagram": "📊 Diagram 1: Arrows on periodic table — → atomic radius decreases, ↓ atomic radius increases. Diagram 2: Na(186pm) → Na⁺(95pm) and Cl(99pm) → Cl⁻(181pm)",
+          "commonMistakes": [
+            "Saying atomic radius increases across period (WRONG — decreases)",
+            "Saying anion is smaller than neutral atom (WRONG — anion is larger)",
+            "Not explaining the REASON for each trend"
+          ]
+        },
+        {
+          "id": "lq4",
+          "question": "Define ionization energy. Explain factors affecting it and periodic trends. Also explain why O has lower first IE than N.",
+          "keyPoints": [
+            "First IE: energy to remove one electron from one mole of gaseous atoms to form one mole of gaseous 1+ ions. Na₍g₎→Na⁺₍g₎+e⁻, ΔHᵢ₁=+494 kJ/mol",
+            "Second IE (Ca): Ca⁺→Ca²⁺+e⁻, ΔHᵢ₂=+1150 kJ/mol. Third IE much larger (noble gas core).",
+            "Factors: (1) Nuclear charge ↑ → IE ↑; (2) Atomic size ↑ → IE ↓; (3) Half/fully-filled subshells → extra stability → IE ↑; (4) Shielding ↑ → IE ↓; (5) Spin-pair repulsion → IE ↓",
+            "Across period: generally INCREASES (nuclear charge ↑, size ↓). Exceptions: IE(Al)<IE(Mg) and IE(O)<IE(N)",
+            "Down group: DECREASES. Example: Li > Na > K > Rb > Cs",
+            "O vs N: N = 2p³ (half-filled, extra stable, IE=1403 kJ/mol). O = 2p⁴ (paired electron, spin-pair repulsion, IE=1365 kJ/mol). N > O despite lower Z."
+          ],
+          "diagram": "📊 Diagram: IE vs atomic number graph — peaks at He, Ne, Ar (noble gases); valleys at Li, Na, K (alkali metals); dips at B (vs Be) and O (vs N)",
+          "commonMistakes": [
+            "Definition missing 'gaseous state' or 'one mole'",
+            "Forgetting state symbols in equations",
+            "Saying IE increases going DOWN a group (WRONG — decreases)",
+            "Explaining O vs N without writing electronic configurations"
+          ]
+        },
+        {
+          "id": "lq5",
+          "question": "Define electron affinity. Explain factors affecting EA and periodic trends. Why does F have lower EA than Cl?",
+          "keyPoints": [
+            "First EA: enthalpy change when 1 mol electrons added to 1 mol gaseous atoms → 1 mol gaseous uni-negative ions. Cl₍g₎+e⁻→Cl⁻₍g₎, ΔH°ₑₐ₁=–348.8 kJ/mol",
+            "First EA negative (exothermic). Second EA positive (anion repels). O⁻+e⁻→O²⁻, ΔH°ₑₐ₂=+844 kJ/mol",
+            "Factors: (1) Smaller atom → greater EA; (2) Higher nuclear charge → greater EA; (3) Half-filled subshell → lower EA (N, P have very low EA)",
+            "Across period: more negative (increases). Exceptions: N and P (half-filled), Noble gases (positive EA — endothermic)",
+            "Down group: decreases (less negative). Halogen EA order: Cl > F > Br > I > At",
+            "F vs Cl anomaly: F has compact 2p orbitals → intense electron-electron repulsion when extra electron added → less energy released. Cl has larger 3p → less repulsion. EA: Cl(–349) > F(–328) kJ/mol"
+          ],
+          "diagram": "📊 Table: Halogen EA values: F(–328.0), Cl(–349.0), Br(–324.0), I(–295.0), At(–270.1) kJ/mol",
+          "commonMistakes": [
+            "Writing positive sign for first EA (WRONG — negative)",
+            "Writing negative sign for second EA of oxygen (WRONG — positive)",
+            "F vs Cl: only saying 'repulsion' without 'compact 2p orbitals'"
+          ]
+        },
+        {
+          "id": "lq6",
+          "question": "Explain the reactions of Na and Mg with water, oxygen, and chlorine. Compare their reactivity.",
+          "keyPoints": [
+            "With water: Na — vigorous: 2Na+2H₂O→2NaOH+H₂ (NaOH = strongly basic). Mg cold water — slow: Mg+2H₂O→Mg(OH)₂+H₂. Mg+steam — vigorous: Mg+2H₂O→MgO+2H₂ (different product!)",
+            "With O₂: Na — golden yellow flame, main product Na₂O₂: 2Na+O₂→2Na₂O₂ (excess O₂); 4Na+O₂→2Na₂O (limited O₂). Na stored under kerosene. Mg — intense white flame: 2Mg+O₂→2MgO (used in fireworks/SOS flares)",
+            "With Cl₂: 2Na+Cl₂→2NaCl (exothermic, golden flame); Mg+Cl₂→MgCl₂",
+            "Comparison: Na more reactive — lower IE, 1 valence electron vs Mg's 2, higher metallic character"
+          ],
+          "diagram": "📊 Comparison table: Na vs Mg with water (vigorous vs slow), oxygen (Na₂O₂ vs MgO), chlorine (NaCl vs MgCl₂)",
+          "commonMistakes": [
+            "Writing Na₂O instead of Na₂O₂ for main sodium-oxygen product",
+            "Missing the steam reaction of Mg (only writing cold water reaction)",
+            "Omitting state symbols from equations",
+            "Forgetting kerosene oil storage for sodium"
+          ]
+        },
+        {
+          "id": "lq7",
+          "question": "Classify oxides of Period 3 as basic, acidic, and amphoteric. Explain bonding trends in oxides and chlorides.",
+          "keyPoints": [
+            "Basic oxides (ionic; formed by metals): Na₂O+H₂O→2NaOH; MgO+H₂O→Mg(OH)₂",
+            "Acidic oxides (covalent; formed by non-metals): SO₂+H₂O→H₂SO₃; SO₃+H₂O→H₂SO₄; P₂O₃+3H₂O→2H₃PO₃. React with NaOH: SiO₂+2NaOH→Na₂SiO₃+H₂O",
+            "Amphoteric: Al₂O₃. With acid: Al₂O₃+6HCl→2AlCl₃+3H₂O. With base: Al₂O₃+2NaOH→2NaAlO₂+H₂O",
+            "Bonding trend in oxides: Groups 1–3 (ionic); Groups 4–7 (covalent). Reason: electronegativity increases left to right → difference between O and element decreases → more covalent.",
+            "Bonding trend in chlorides: Groups 1–3 ionic (NaCl, MgCl₂); Groups 4–7 covalent (SiCl₄, PCl₅, SCl₂). Same reason.",
+            "Summary: Na(basic, ionic) → Al(amphoteric) → Si, P, S, Cl (acidic, covalent)"
+          ],
+          "diagram": "📊 Period 3 bar: Na–Mg(Basic/Ionic) | Al(Amphoteric) | Si–P–S–Cl(Acidic/Covalent) → arrow: increasing covalent character",
+          "commonMistakes": [
+            "Placing Al₂O₃ in basic or acidic (it is AMPHOTERIC)",
+            "Product of Al₂O₃+NaOH = NaAlO₂ (not NaAlO₃)",
+            "Saying all Period 3 oxides are ionic (right-side oxides are covalent)"
+          ]
+        }
+      ]
+    }
+  ]
+}
