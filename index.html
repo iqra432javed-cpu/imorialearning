@@ -3,137 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chemistry — Imoria Learning</title>
-  <meta name="description" content="FSC and MDCAT Chemistry — notes, MCQs, short questions, long questions." />
+  <title>Imoria Learning — FSC & MDCAT Prep</title>
+  <meta name="description" content="Master FSC and MDCAT with structured notes, MCQs, and model answers. Built for Pakistani students." />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── Chemistry-page-only layout ── */
+    /* ── Index-only overrides ── */
+    .hero-grid { padding: 0 0 60px; }
 
-    /* Page hero (sticky nav + hero = no overlap) */
-    .chem-page-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0f2035 50%, #091524 100%);
-      padding: calc(var(--nav-h) + 40px) 0 40px;
-      position: relative; overflow: hidden;
-    }
-    .chem-page-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 70% at 80% 50%, rgba(201,168,76,0.07), transparent);
-    }
-    .chem-page-hero .container { position: relative; z-index: 2; }
-
-    .chem-hero-inner {
-      display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap;
-    }
-    .chem-hero-left { flex: 1; min-width: 260px; }
-    .chem-hero-right {
-      display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start;
-      flex-shrink: 0;
-    }
-
-    .chem-pill {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: var(--radius-md);
-      padding: 12px 18px; text-align: center; min-width: 90px;
-    }
-    .chem-pill .cp-num { font-size: 1.4rem; font-weight: 800; color: var(--gold); line-height: 1; }
-    .chem-pill .cp-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
-
-    #chapter-title { color: var(--white); font-size: clamp(1.3rem, 3vw, 2rem); margin-bottom: 6px; }
-    #chapter-subtitle { color: var(--gold); font-size: 0.88rem; font-weight: 600; margin-bottom: 0; }
-
-    /* Sticky chapter selector */
-    .chapter-selector {
+    .stats-strip {
       background: var(--white);
-      border-bottom: 2px solid var(--gray-200);
-      padding: 14px 0;
-      position: sticky;
-      top: var(--nav-h);
-      z-index: 100;
-      box-shadow: var(--shadow-sm);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 28px 0;
     }
-    .chapter-selector .container { overflow: hidden; }
-
-    /* Two-column layout */
-    .chem-layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 0;
-      min-height: calc(100vh - var(--nav-h) - 200px);
-      background: var(--off-white);
+    .stats-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0; flex-wrap: wrap;
     }
-
-    /* Sidebar */
-    .chem-sidebar {
-      background: var(--white);
+    .stat-item {
+      flex: 1; min-width: 140px; text-align: center;
+      padding: 12px 24px;
       border-right: 1px solid var(--gray-200);
-      padding: 24px 0;
-      position: sticky;
-      top: calc(var(--nav-h) + 56px); /* below sticky chapter selector */
-      height: calc(100vh - var(--nav-h) - 56px);
-      overflow-y: auto;
     }
-    .sidebar-label {
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-      color: var(--gray-400); padding: 0 20px; margin-bottom: 10px;
-    }
-    .sidebar-tab {
-      display: flex; align-items: center; gap: 10px;
-      padding: 12px 20px; cursor: pointer;
-      color: var(--gray-700); font-size: 0.9rem; font-weight: 600;
-      border-left: 3px solid transparent;
+    .stat-item:last-child { border-right: none; }
+    .stat-item .num { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1; }
+    .stat-item .lbl { font-size: 0.8rem; color: var(--gray-600); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* How it works */
+    .how-step {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 28px; background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
       transition: var(--transition);
     }
-    .sidebar-tab:hover { background: var(--off-white); color: var(--navy); }
-    .sidebar-tab.active {
-      background: var(--gold-pale);
-      color: var(--navy);
-      border-left-color: var(--gold);
+    .how-step:hover { border-color: rgba(201,168,76,0.35); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+    .how-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--gold);
+      font-size: 1rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
-    .sidebar-tab .st-icon { font-size: 1.1rem; width: 22px; text-align: center; flex-shrink: 0; }
-    .sidebar-tab .st-label { flex: 1; }
-    .sidebar-tab .st-count {
-      background: var(--gray-100); color: var(--gray-600);
-      font-size: 0.7rem; font-weight: 700;
-      padding: 2px 8px; border-radius: 10px;
+    .how-text h4 { color: var(--navy); margin-bottom: 6px; }
+    .how-text p  { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--navy), #0a1a2e);
+      border-radius: var(--radius-xl); padding: 56px 48px;
+      text-align: center; position: relative; overflow: hidden;
     }
-    .sidebar-tab.active .st-count { background: rgba(201,168,76,0.2); color: var(--gold); }
-    .sidebar-divider { height: 1px; background: var(--gray-200); margin: 12px 20px; }
-
-    /* Main content area */
-    .chem-main { padding: 28px 32px 80px; min-width: 0; }
-
-    /* Mobile tab list (fallback for small screens — hidden on desktop) */
-    .mobile-tabs { display: none; }
-
-    /* Tab panels */
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-
-    /* Loading skeleton */
-    .content-loading {
-      display: flex; flex-direction: column; gap: 16px; padding: 24px 0;
+    .cta-banner::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(201,168,76,0.1), transparent);
     }
-    .content-loading .sk-title { height: 28px; width: 55%; border-radius: var(--radius-sm); }
-    .content-loading .sk-block { height: 140px; width: 100%; border-radius: var(--radius-md); }
-    .content-loading .sk-line { height: 14px; width: 90%; border-radius: 4px; }
-    .content-loading .sk-line.short { width: 65%; }
+    .cta-banner h2 { color: var(--white); position: relative; z-index: 2; margin-bottom: 14px; }
+    .cta-banner p  { color: var(--gray-400); max-width: 480px; margin: 0 auto 32px; position: relative; z-index: 2; font-size: 1.05rem; }
+    .cta-banner .actions { position: relative; z-index: 2; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-    /* Empty state */
-    .empty-state { text-align: center; padding: 80px 24px; }
-    .empty-state .es-icon { font-size: 3.5rem; margin-bottom: 16px; }
-    .empty-state h3 { color: var(--navy); margin-bottom: 8px; }
-    .empty-state p { color: var(--gray-600); font-size: 0.9rem; }
-
-    /* ── Responsive ── */
-    @media (max-width: 900px) {
-      .chem-layout { grid-template-columns: 1fr; }
-      .chem-sidebar { display: none; }
-      .mobile-tabs { display: block; }
-      .chem-main { padding: 20px 16px 60px; }
+    /* Subjects preview */
+    .subjects-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
     }
+    .preview-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: var(--transition);
+      background: var(--white);
+    }
+    .preview-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(201,168,76,0.3); }
+    .preview-card.locked { opacity: 0.55; pointer-events: none; }
+    .preview-banner {
+      height: 120px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+    .preview-card-body { padding: 18px 20px; }
+    .preview-card-body h3 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
+    .preview-card-body p  { font-size: 0.82rem; color: var(--gray-600); }
+    .preview-card-footer {
+      padding: 12px 20px;
+      background: var(--off-white);
+      border-top: 1px solid var(--gray-100);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .preview-chip {
+      font-size: 0.72rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 50px;
+      background: var(--green-light); color: var(--green);
+    }
+    .preview-chip.soon {
+      background: var(--gray-100); color: var(--gray-400);
+    }
+    .preview-link {
+      font-size: 0.82rem; font-weight: 600; color: var(--gold);
+    }
+
     @media (max-width: 600px) {
-      .chem-hero-right { display: none; }
+      .cta-banner { padding: 36px 24px; }
+      .stat-item { min-width: 100px; padding: 10px 12px; }
+      .stat-item .num { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -144,15 +118,16 @@
   <div class="container">
     <div class="nav-inner">
       <div class="nav-brand">
+        <!-- Replace src with your actual logo path -->
         <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#a07000);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:var(--navy);">I</div>
         <span class="nav-title">Imoria <span>Learning</span></span>
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="subjects.html" class="nav-link">Subjects</a></li>
-        <li><a href="chemistry.html" class="nav-link active">Chemistry</a></li>
+        <li><a href="chemistry.html" class="nav-link">Chemistry</a></li>
       </ul>
-      <a href="subjects.html" class="nav-cta">All Subjects</a>
+      <a href="subjects.html" class="nav-cta">Start Learning →</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -160,168 +135,274 @@
   </div>
 </nav>
 
-<!-- ════════════════ PAGE HERO ════════════════ -->
-<div class="chem-page-hero">
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
   <div class="container">
-    <div class="breadcrumb" style="justify-content:flex-start;margin-bottom:16px;">
-      <a href="index.html" style="color:var(--gray-400);">Home</a>
-      <span style="color:var(--gray-600);">›</span>
-      <a href="subjects.html" style="color:var(--gray-400);">Subjects</a>
-      <span style="color:var(--gray-600);">›</span>
-      <span style="color:var(--gold);">Chemistry</span>
-    </div>
-    <div class="chem-hero-inner">
-      <div class="chem-hero-left">
-        <div style="margin-bottom:10px;">
-          <span class="badge badge-gold">⚗️ FSC &amp; MDCAT</span>
+    <div class="hero-grid">
+
+      <!-- Left: copy -->
+      <div>
+        <div class="hero-badge">
+          <span class="badge badge-gold">🇵🇰 Built for Pakistan</span>
         </div>
-        <h1 id="chapter-title">Loading chapter…</h1>
-        <p id="chapter-subtitle"></p>
+
+        <h1 class="hero-title">
+          Crack MDCAT &amp;<br>
+          <span class="accent">FSC with Confidence</span>
+        </h1>
+
+        <p class="hero-desc">
+          Structured notes, 1000+ MCQs, model short &amp; long answers —
+          all mapped to the Punjab Board and MDCAT syllabus.
+          No fluff. Just what's in the exam.
+        </p>
+
+        <div class="hero-actions">
+          <a href="subjects.html" class="btn btn-primary">
+            📚 Browse Subjects
+          </a>
+          <a href="chemistry.html" class="btn btn-outline">
+            ⚗️ Start Chemistry
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num" data-count="25">25</div>
+            <div class="lbl">MCQs per Chapter</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-count="20">20</div>
+            <div class="lbl">Short Questions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-count="7">7</div>
+            <div class="lbl">Long Questions</div>
+          </div>
+        </div>
       </div>
-      <div class="chem-hero-right">
-        <div class="chem-pill">
-          <div class="cp-num" id="count-notes">—</div>
-          <div class="cp-lbl">Topics</div>
+
+      <!-- Right: floating cards visual -->
+      <div class="hero-visual">
+        <div class="hero-logo-wrap">
+          <div style="font-size:6rem;filter:drop-shadow(0 0 40px rgba(201,168,76,0.4));">⚗️</div>
         </div>
-        <div class="chem-pill">
-          <div class="cp-num" id="count-mcqs">—</div>
-          <div class="cp-lbl">MCQs</div>
+        <div class="hero-float" style="top:30px;right:-10px;">
+          <span class="icon">✅</span> MCQ with Explanations
         </div>
-        <div class="chem-pill">
-          <div class="cp-num" id="count-short">—</div>
-          <div class="cp-lbl">Short Qs</div>
+        <div class="hero-float" style="bottom:80px;left:-20px;">
+          <span class="icon">📋</span> Model Answers
         </div>
-        <div class="chem-pill">
-          <div class="cp-num" id="count-long">—</div>
-          <div class="cp-lbl">Long Qs</div>
+        <div class="hero-float" style="top:150px;left:-40px;">
+          <span class="icon">🎯</span> High-Yield Topics
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ STATS STRIP ════════════════ -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="num">1</div>
+        <div class="lbl">Subject Active</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">10</div>
+        <div class="lbl">Topics (Ch 1)</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">25</div>
+        <div class="lbl">MCQs</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">20</div>
+        <div class="lbl">Short Qs</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">7</div>
+        <div class="lbl">Long Qs</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ════════════════ CHAPTER SELECTOR ════════════════ -->
-<div class="chapter-selector">
+<!-- ════════════════ SUBJECTS PREVIEW ════════════════ -->
+<section class="section" style="background:var(--white);">
   <div class="container">
-    <div class="chapter-pills" id="chapter-pills">
-      <!-- Rendered by chemistry.js -->
-      <div class="skeleton" style="width:180px;height:36px;border-radius:50px;flex-shrink:0;"></div>
-      <div class="skeleton" style="width:180px;height:36px;border-radius:50px;flex-shrink:0;opacity:0.5;"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ════════════════ MAIN LAYOUT ════════════════ -->
-<div class="chem-layout" id="content-area">
-
-  <!-- ── SIDEBAR (desktop) ── -->
-  <aside class="chem-sidebar">
-    <div class="sidebar-label">Study Mode</div>
-
-    <div class="sidebar-tab active" data-tab="notes" onclick="sidebarNav('notes', this)">
-      <span class="st-icon">📚</span>
-      <span class="st-label">Concept Notes</span>
-      <span class="st-count" id="sb-count-notes">—</span>
-    </div>
-    <div class="sidebar-tab" data-tab="mcqs" onclick="sidebarNav('mcqs', this)">
-      <span class="st-icon">🧠</span>
-      <span class="st-label">MCQ Practice</span>
-      <span class="st-count" id="sb-count-mcqs">—</span>
-    </div>
-    <div class="sidebar-tab" data-tab="short" onclick="sidebarNav('short', this)">
-      <span class="st-icon">✍️</span>
-      <span class="st-label">Short Questions</span>
-      <span class="st-count" id="sb-count-short">—</span>
-    </div>
-    <div class="sidebar-tab" data-tab="long" onclick="sidebarNav('long', this)">
-      <span class="st-icon">📝</span>
-      <span class="st-label">Long Questions</span>
-      <span class="st-count" id="sb-count-long">—</span>
+    <div class="section-header">
+      <span class="section-label">Subjects</span>
+      <h2>Everything You Need, One Place</h2>
+      <p>Start with Chemistry — Physics and Biology launching soon.</p>
     </div>
 
-    <div class="sidebar-divider"></div>
+    <div class="subjects-preview">
 
-    <div class="sidebar-label">Info</div>
-    <div style="padding: 12px 20px;">
-      <div style="background:var(--gold-pale);border-radius:var(--radius-md);padding:14px;border:1px solid rgba(201,168,76,0.25);">
-        <div style="font-size:0.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">🎯 Tip</div>
-        <p style="font-size:0.8rem;color:var(--gray-700);line-height:1.55;">Start with Notes → try MCQs → reveal Short Qs → attempt Long Qs for best results.</p>
-      </div>
-    </div>
+      <!-- Chemistry — Active -->
+      <a href="chemistry.html" class="preview-card">
+        <div class="preview-banner chem-header">⚗️</div>
+        <div class="preview-card-body">
+          <h3>Chemistry</h3>
+          <p>Periodic table, bonding, reactions, organic and more — fully loaded.</p>
+        </div>
+        <div class="preview-card-footer">
+          <span class="preview-chip">Available</span>
+          <span class="preview-link">Start →</span>
+        </div>
+      </a>
 
-    <div style="padding: 8px 20px 0;">
-      <div style="background:var(--off-white);border-radius:var(--radius-md);padding:14px;border:1px solid var(--gray-200);">
-        <div style="font-size:0.75rem;font-weight:700;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">⭐ Priority Key</div>
-        <div style="font-size:0.78rem;color:var(--gray-700);line-height:1.8;">
-          ⭐⭐⭐⭐⭐ Must know<br>
-          ⭐⭐⭐⭐ Very likely<br>
-          ⭐⭐⭐ Important<br>
-          ⭐⭐ Good to know
+      <!-- Physics — Coming Soon -->
+      <div class="preview-card locked">
+        <div class="preview-banner phys-header">⚡</div>
+        <div class="preview-card-body">
+          <h3>Physics</h3>
+          <p>Mechanics, waves, electricity, modern physics and more.</p>
+        </div>
+        <div class="preview-card-footer">
+          <span class="preview-chip soon">Coming Soon</span>
         </div>
       </div>
+
+      <!-- Biology — Coming Soon -->
+      <div class="preview-card locked">
+        <div class="preview-banner bio-header">🔬</div>
+        <div class="preview-card-body">
+          <h3>Biology</h3>
+          <p>Cell biology, genetics, ecology, human physiology and more.</p>
+        </div>
+        <div class="preview-card-footer">
+          <span class="preview-chip soon">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Computer Science — Coming Soon -->
+      <div class="preview-card locked">
+        <div class="preview-banner cs-header">💻</div>
+        <div class="preview-card-body">
+          <h3>Computer Science</h3>
+          <p>Algorithms, data structures, databases and programming.</p>
+        </div>
+        <div class="preview-card-footer">
+          <span class="preview-chip soon">Coming Soon</span>
+        </div>
+      </div>
+
     </div>
-  </aside>
+  </div>
+</section>
 
-  <!-- ── MAIN CONTENT ── -->
-  <main class="chem-main">
+<!-- ════════════════ HOW IT WORKS ════════════════ -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">How It Works</span>
+      <h2>Four Tabs. One Chapter. Full Prep.</h2>
+      <p>Everything is structured to match how examiners actually ask questions.</p>
+    </div>
 
-    <!-- Mobile tab list (shows only on small screens) -->
-    <div class="mobile-tabs">
-      <div class="tab-list" style="margin-bottom:24px;">
-        <button class="tab-btn active" data-tab="notes">
-          📚 Notes <span class="count" id="count-notes-mob"></span>
-        </button>
-        <button class="tab-btn" data-tab="mcqs">
-          🧠 MCQs <span class="count" id="count-mcqs-mob"></span>
-        </button>
-        <button class="tab-btn" data-tab="short">
-          ✍️ Short <span class="count" id="count-short-mob"></span>
-        </button>
-        <button class="tab-btn" data-tab="long">
-          📝 Long <span class="count" id="count-long-mob"></span>
-        </button>
+    <div class="grid-2" style="gap:16px;">
+
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-text">
+          <h4>📚 Read Concept Notes</h4>
+          <p>Expandable topics with key points, memory tricks, revision tables, and exam tips — all from the syllabus.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-text">
+          <h4>🧠 Test with MCQs</h4>
+          <p>Attempt 25 questions per chapter. Instant feedback, full explanations, and a final score with a progress bar.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-text">
+          <h4>✍️ Practice Short Questions</h4>
+          <p>Reveal model answers with marking points and examiner tips — exactly what the board expects to see.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <div class="how-text">
+          <h4>📝 Master Long Questions</h4>
+          <p>Full key-point breakdowns, diagram requirements, and the most common mistakes students make.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FEATURES ════════════════ -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Features</span>
+      <h2>Designed Around the Exam</h2>
+    </div>
+    <div class="grid-3" style="gap:20px;">
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--gold-pale);">🎯</div>
+        <h3>High-Yield Flags</h3>
+        <p>Every topic is rated by exam frequency. Know exactly where to spend your time.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--blue-light);">🧠</div>
+        <h3>Memory Tricks</h3>
+        <p>Mnemonics and shortcuts for every topic — built right into the notes.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--green-light);">✅</div>
+        <h3>MCQ Explanations</h3>
+        <p>Every wrong option explained. You don't just see the right answer — you understand why others are wrong.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--purple-light);">📋</div>
+        <h3>Marking Schemes</h3>
+        <p>Short questions come with official-style marking points, so you know exactly what earns marks.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--red-light);">⚠️</div>
+        <h3>Common Mistakes</h3>
+        <p>Long questions include the mistakes students actually make — so you don't repeat them.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="feature-icon" style="background:var(--orange-light);">📱</div>
+        <h3>Works Everywhere</h3>
+        <p>Fully responsive — study from your phone, tablet, or desktop without losing anything.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CTA ════════════════ -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Ready to Start?</h2>
+      <p>Jump straight into Chapter 1 of Chemistry — Periodic Table and Periodic Properties.</p>
+      <div class="actions">
+        <a href="chemistry.html" class="btn btn-primary">⚗️ Open Chemistry</a>
+        <a href="subjects.html" class="btn btn-outline">View All Subjects</a>
       </div>
     </div>
-
-    <!-- ── TAB PANELS (rendered by chemistry.js) ── -->
-    <div id="panel-notes" class="tab-panel active">
-      <!-- Loading skeleton -->
-      <div class="content-loading">
-        <div class="skeleton sk-title"></div>
-        <div class="skeleton sk-block"></div>
-        <div class="skeleton sk-line"></div>
-        <div class="skeleton sk-line short"></div>
-        <div class="skeleton sk-block" style="height:100px;opacity:0.6;"></div>
-        <div class="skeleton sk-line"></div>
-      </div>
-    </div>
-
-    <div id="panel-mcqs" class="tab-panel">
-      <div class="empty-state">
-        <div class="es-icon">🧠</div>
-        <h3>MCQ Practice</h3>
-        <p>Select this tab to load the MCQs for this chapter.</p>
-      </div>
-    </div>
-
-    <div id="panel-short" class="tab-panel">
-      <div class="empty-state">
-        <div class="es-icon">✍️</div>
-        <h3>Short Questions</h3>
-        <p>Select this tab to load short questions and model answers.</p>
-      </div>
-    </div>
-
-    <div id="panel-long" class="tab-panel">
-      <div class="empty-state">
-        <div class="es-icon">📝</div>
-        <h3>Long Questions</h3>
-        <p>Select this tab to load long question model answers.</p>
-      </div>
-    </div>
-
-  </main>
-</div>
+  </div>
+</section>
 
 <!-- ════════════════ FOOTER ════════════════ -->
 <footer class="footer">
@@ -332,19 +413,21 @@
           <div style="width:32px;height:32px;border-radius:6px;background:linear-gradient(135deg,var(--gold),#a07000);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--navy);">I</div>
           <span style="color:var(--white);font-weight:800;font-size:1.05rem;">Imoria Learning</span>
         </div>
-        <p class="footer-tagline">Structured exam prep for FSC and MDCAT students across Pakistan.</p>
+        <p class="footer-tagline">Structured exam prep for FSC and MDCAT students across Pakistan. Clear notes. Real questions. Honest explanations.</p>
       </div>
       <div class="footer-col">
-        <h5>Chemistry</h5>
-        <a href="#" onclick="sidebarNav('notes', null); return false;">Concept Notes</a>
-        <a href="#" onclick="sidebarNav('mcqs', null); return false;">MCQ Practice</a>
-        <a href="#" onclick="sidebarNav('short', null); return false;">Short Questions</a>
-        <a href="#" onclick="sidebarNav('long', null); return false;">Long Questions</a>
+        <h5>Subjects</h5>
+        <a href="chemistry.html">Chemistry</a>
+        <a href="#">Physics (Soon)</a>
+        <a href="#">Biology (Soon)</a>
+        <a href="#">Computer Science (Soon)</a>
       </div>
       <div class="footer-col">
-        <h5>Navigation</h5>
-        <a href="index.html">Home</a>
-        <a href="subjects.html">All Subjects</a>
+        <h5>Resources</h5>
+        <a href="chemistry.html#panel-mcqs">MCQ Practice</a>
+        <a href="chemistry.html#panel-short">Short Questions</a>
+        <a href="chemistry.html#panel-long">Long Questions</a>
+        <a href="chemistry.html#panel-notes">Concept Notes</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -356,74 +439,6 @@
 
 <div class="toast" id="main-toast"></div>
 
-<!-- ════════════════ SCRIPTS ════════════════ -->
 <script src="main.js"></script>
-<script src="chemistry.js"></script>
-<script>
-/* ────────────────────────────────────────────
-   Chemistry page — sidebar + mobile tab glue
-   Works alongside chemistry.js without touching
-   its internal state (currentTab, renderActiveTab)
-──────────────────────────────────────────── */
-
-/**
- * sidebarNav — activates a tab both in the sidebar
- * and in chemistry.js's tab system.
- * @param {string} tab   — 'notes' | 'mcqs' | 'short' | 'long'
- * @param {Element|null} clickedEl — the sidebar-tab element that was clicked
- */
-function sidebarNav(tab, clickedEl) {
-  // 1. Update sidebar active state
-  document.querySelectorAll('.sidebar-tab').forEach(t => t.classList.remove('active'));
-  if (clickedEl) clickedEl.classList.add('active');
-
-  // 2. Sync the chemistry.js tab button so renderActiveTab fires correctly
-  const tabBtn = document.querySelector(`.tab-btn[data-tab="${tab}"]`);
-  if (tabBtn) tabBtn.click();
-
-  // 3. Scroll main area into view on mobile
-  document.getElementById('content-area')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Keep sidebar counts in sync with chemistry.js's updateTabCounts
-// We hook into MutationObserver on the count elements
-const tabKeys = ['notes', 'mcqs', 'short', 'long'];
-function syncSidebarCounts() {
-  tabKeys.forEach(key => {
-    const heroEl   = document.getElementById(`count-${key}`);
-    const sbEl     = document.getElementById(`sb-count-${key}`);
-    const mobEl    = document.getElementById(`count-${key}-mob`);
-    if (heroEl && sbEl)  sbEl.textContent  = heroEl.textContent;
-    if (heroEl && mobEl) mobEl.textContent = heroEl.textContent;
-  });
-}
-
-// Poll for count updates (chemistry.js sets them after JSON load)
-let syncInterval = setInterval(() => {
-  const notesEl = document.getElementById('count-notes');
-  if (notesEl && notesEl.textContent !== '—') {
-    syncSidebarCounts();
-    clearInterval(syncInterval);
-    // Re-sync whenever chapter changes
-    const obs = new MutationObserver(syncSidebarCounts);
-    tabKeys.forEach(key => {
-      const el = document.getElementById(`count-${key}`);
-      if (el) obs.observe(el, { childList: true, characterData: true, subtree: true });
-    });
-  }
-}, 200);
-
-// Also keep sidebar active state in sync when mobile tabs are clicked
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tab = btn.dataset.tab;
-      document.querySelectorAll('.sidebar-tab').forEach(t => t.classList.remove('active'));
-      const matching = document.querySelector(`.sidebar-tab[data-tab="${tab}"]`);
-      if (matching) matching.classList.add('active');
-    });
-  });
-});
-</script>
 </body>
 </html>
